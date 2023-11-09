@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+    <title>CraziCity | Arena</title>
+    <link rel="stylesheet" href="../styles/arena.css">
+		<link rel="stylesheet" href="../styles/statbar.css">
+		<link rel="icon" href="../img/favi/arena.jpg">
+  </head>
+  <body >
+		<div id="stat-cont"></div> <!-- Player.js spawns stat bar -->
+   <div class="logo">
+			<img class='lv'src='../img/lv.jpg'/>
+		  <div id='level'>1</div>
+		  <div class="xp-bar-container">
+			<div class="xp-bar"></div></div></div>
+		<div class="fight-container">
+        <div class="fight-stats">
+            <div id="player-stats">
+                <h2>Player Stats</h2>
+                <p>Name: <span id="player-name"></span></p>
+							  <p>Health: <span id="player-health"></span></p>
+							  <p>Damage: <span id="player-damage"></span></p>
+							<p id='playerDefenseSpan'>Defense: </p>
+							  <div class="hp-bar-container player-hp-bar">
+                 <div class="hp-bar" id="player-hp-bar"></div></div>
+            </div>
+            <div id='enemybattle'><div id="enemy-stats">
+                <h2>Enemy Stats</h2>
+                <p>Name: <span id="enemy-name"></span></p>
+                <p>Health: <span id="enemy-health"></span></p>
+                <p>Damage: <span id="enemy-damage"></span></p>
+							  <div class="hp-bar-container enemy-hp-bar" id='enemy-hp-container'>
+                 <div class="hp-bar" id="enemy-hp-bar"></div> </div>
+							</div></div>
+        </div>
+		</div>
+		<div id="chooseenemy">
+    <input type="text" autocomplete="off" spellcheck="false" id="enemyNameInput" placeholder="Enter Enemy:">
+    <button id='fight-button'onclick="fight()">Fight</button>
+  </div>
+				
+		<div id="toast-container"></div>
+    <div id="level-container"></div>
+      
+<div class="arenabackground"/>
+				<div id="toast-container"></div>
+    <div id="level-container"></div>
+		<script src="../scripts/player.js"></script>
+		<script src="../scripts/fighter.js"></script>
+    <script src="../scripts/inv.js"></script>
+  </body>
+</html>

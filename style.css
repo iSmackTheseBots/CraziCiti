@@ -1,0 +1,297 @@
+*{
+    justify-content: center;
+    text-align: center;
+    font-family: Chalkduster, fantasy;
+    font-variant: small-caps;
+    margin: 0;
+    padding: 0;
+}
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(7px);
+  z-index: -1;
+}
+.invbackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/invbackground.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(7px);
+  z-index: -1;
+}
+
+#dmenu , #smenu , #hmenu , #cmenu{
+  display: none; 
+  padding: 5px;
+  list-style: none;
+  border: 3px solid;
+  border-radius: 5px;
+  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+#dmenu li , #smenu li , #hmenu li , #cmenu li{
+  padding: 5px;
+  font-size: 14px;
+  color: #000033;
+}
+#dmenu li:hover , #smenu li:hover , #hmenu li:hover , #cmenu li:hover{
+  padding: 6px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #000099;
+}
+#smenu {
+  border-color:#111144;
+      background-color: #BBBBFF88;
+}
+#hmenu{
+border-color:#441111;
+      background-color: #FFBBBB88;
+}
+#dmenu{
+border-color:#114411;
+      background-color: #BBDDBB88;
+}
+#cmenu{
+border-color:#226622;
+      background-color: #BBFFBB88;
+}
+#inventory-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2%;
+    margin: 7%;
+	  margin-top:2%;
+}
+#toast-container {
+    display: flex;
+    top: 50%;
+    position: fixed;
+    left: 50%;
+	  transform: translate(-50%, -50%);
+}
+#level-container {
+    display: flex;
+}
+.backbtn{
+	background-color: #CC2222;
+	color:#FFF;
+	padding: 5px;
+	border:3px solid black;
+	border-radius: 5px;
+	font-size:large;
+}
+.backbtn:hover {
+    background-color: #FF2222;
+       font-weight: bold;
+}
+.shopbtn{
+	background-color: #2222CC;
+	color:#FFF;
+	padding: 5px;
+	border:3px solid black;
+	border-radius: 5px;
+	font-size:large;
+}
+.shopbtn:hover {
+    background-color: #2222FF;
+       font-weight: bold;
+}
+.hidden {
+    display: none;
+}
+
+#shopMenu {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	  width:50%;
+	  overflow-y:scroll;
+	  height:20%;
+		
+}
+.bgrid{
+display: grid;
+margin:10px;
+grid-template-columns: repeat(3, 1fr);
+grid-gap: 15px;
+    margin-top: 70px;
+}
+.item {
+    background-color: #6405c7cc;
+    border: 3px solid black;
+    border-radius: 15px;
+    height: 40px;
+    font-size: large;
+	  color: #fff;
+}
+.item:hover {
+    background-color: #6405c7ff;
+       font-weight: bold;
+}
+.grid-container {
+  align-items:center;
+  justify-items: center;
+  grid-template-columns: repeat(1, 1fr);
+  padding: 10px;
+	border-radius: 10px;
+  border: 4px solid white;
+}
+.itemimg{
+  width: 30%;
+}
+.invname{
+    color: #FFFFFF;
+font-weight:bold;
+    text-align: center;
+}
+.invname:hover {
+color: #EEEEFF;
+}
+.sellbtn{
+    border-radius: 6px;
+    border:2px solid black;
+    background-color: #ff9999;
+    font-size: x-large;
+	  padding:7px;
+}
+.sellbtn:hover{
+    border-radius: 5px;
+    background-color: #ff7777;
+    font-weight: bold;
+    cursor: pointer;
+}
+.noequip{
+    border-radius: 6px;
+    border:2px solid black;
+    background-color: #999999;
+    font-size: x-large;
+	  padding: 7px;
+}
+.equipbtn{
+    border-radius: 6px;
+    border:2px solid black;
+    background-color: #9999ff;
+    font-size: x-large;
+	  padding: 7px;
+}
+.equipbtn:hover{
+    border-radius: 5px;
+    background-color: #7777ff;
+    font-weight: bold;
+    cursor: pointer;
+}
+.continuebtn{
+	background-color: #2222CC;
+	color:#FFF;
+	padding: 5px;
+	border:3px solid black;
+	border-radius: 5px;
+	font-size:large;
+}
+.continuebtn:hover {
+    background-color: #2222FF;
+       font-weight: bold;
+}
+.toast {
+  background-color: #11111199;
+  display: flex;
+  justify-content: center;
+  color: #DDDDDD;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 10px;
+	z-index: 99;
+}
+.shitem img{
+	max-width:40px;
+	max-height:40px;
+}
+.shitem {
+	border-radius: 10px;
+	border:3px solid black;
+	color: #FFFFFF;
+	background-color:#666777;
+	padding: 5px;
+}
+.shitem:hover{
+	background-color:#777888;
+}
+.tooltip{
+	display: none;
+	position: absolute;
+	background-color:#333;
+  color:#fff;
+	padding: 5px;
+	border-radius: 5px;
+	transition: 0.6s;
+}
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+  background-image: url('../img/mafia.jpg');
+  border: 5px dashed #777888;
+  border-radius: 20px;
+	position: absolute;
+  top: 50%;
+	left: 50%; 
+  transform: translate(-50%, -50%);
+  padding: 20px;
+}
+.descr{
+	font-weight: bold;
+	border-radius: 25px;
+    background-color: #777888;
+    padding: 20px;
+    box-shadow: inset 2px -2px 30px 20px rgba(0, 0, 0, 0.3);
+}
+#missionreq img{
+	max-width:15%;
+}
+#missionname{
+  border-radius: 10px;
+  color: #000;
+	padding: 10px;
+	background-color:#666777;
+	box-shadow:inset 0px 0px 5px 5px rgba(0, 0, 0, 0.3)
+}
+#rwrds{
+	font-size: x-large;
+	margin:3%;
+	font-weight: bold;
+}
+#missioncashreward{
+	border: 3px solid #999AAA;
+  border-radius: 10px;
+  color: #33CC33;
+	padding: 2px;
+	background-color:#666777;
+	box-shadow:inset 0px 0px 5px 5px rgba(0, 0, 0, 0.3)
+}
+#missionxpreward{
+	border: 3px solid #999AAA;
+  border-radius: 10px;
+  color: #3333CC;
+	padding: 2px;
+	background-color:#666777;
+	box-shadow:inset 0px 0px 5px 5px rgba(0, 0, 0, 0.3)
+}

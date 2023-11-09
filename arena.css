@@ -1,0 +1,88 @@
+*{
+    justify-content: center;
+    text-align: center;
+    font-family: Chalkduster, fantasy;
+    font-variant: small-caps;
+    margin: 0;
+    padding: 0;
+}
+.arenabackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/arenabackground.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(7px);
+  z-index: -10;
+}
+#toast-container, #level-container {
+    display: flex;
+}
+#fight-button{
+	background-color: #222;
+	border: 3px solid white;
+	border-radius: 10px;
+	text-align: center;
+	color:#fff;
+  font-family: Chalkduster, fantasy;
+  font-variant: small-caps;
+	padding: 7px;
+}
+#chooseenemy{
+	  display: flex;
+	
+}
+#enemyNameInput{
+	border: 3px solid white;
+	border-radius:10px;
+	color:red;
+	font-weight:bold;
+	font-size:large;
+	background-color:#666777;
+	caret-color: transparent;
+}
+#enemyNameInput::placeholder {
+  color: #FF1111; /* Replace with your desired color code or name */
+}
+#enemybattle{
+	display:flex;
+}
+#enemybattle img{
+	max-width:100px;
+}
+.toast {
+  background-color: #11111199;
+  display: flex;
+  justify-content: center;
+  color: #DDDDDD;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.fight-container {
+  display: flex;
+  align-items: center;
+}
+.fight-stats {
+  margin-right: 10%;
+	color: #fff;
+}
+.battle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.player-hp-bar, .enemy-hp-bar {
+  transition: width 0.7s;
+}
+.enemy{
+	color:#fff
+	max-width:350px;
+	max-height:100px;
+	overflow-x:scroll;
+	border:5px solid white;
+	border-radius: 10px;
+}
