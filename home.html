@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>CraziCity | Home</title>
+  <link rel="icon" href="../img/favi/favi.jpg">
+<link rel="stylesheet" href= "../styles/statbar.css">
+<link rel="stylesheet" href="../styles/style.css">
+</head>
+
+<body>
+    <div id="stat-cont"></div> <!-- Player.js spawns stat bar -->
+    <div class="logo">
+			<img class='lv'src='../img/lv.jpg'/>
+			<div id='level'>1</div>
+			<div class="xp-bar-container">
+			<div class="xp-bar"></div></div></div>
+    
+<div class="bgrid"> <!-- Button Grid -->
+  <button class="item" onclick="beg()">Beg</button>
+  <button class="item" id="donate-menu">Donate</button>
+  <button class="item" onclick="rest()">Rest</button>
+  <button class="item" onclick="location.href='arena.html'">Arena</button>
+  <button class="item" id="shopButton">Shop</button>
+	<div id="shopMenu" class="hidden">
+		<button id="backButton" class="hidden backbtn">Back</button>
+        <div id="categoryMenu">
+            <button id="weaponsButton" class='shopbtn'>Weapons</button>
+            <button id="armoursButton"class='shopbtn'>Armor</button>
+				    <button id="toolsButton"class='shopbtn'>Tools</button>
+            <button id="consumablesButton"class='shopbtn'>Consumeables</button>
+        </div>
+		<div id="weaponsMenu" class='hidden'>
+            <button id="hgButton"class='shopbtn'>Handgun</button>
+            <button id="meleeButton"class='shopbtn'>Melee</button>
+			      <button id="arButton"class='shopbtn'>Assault Rifles</button>
+            <button id="shotgunButton"class='shopbtn'>Shotgun</button>
+        </div>
+        <div id="itemList" class="hidden">
+            <!-- Item list will be populated dynamically using JavaScript -->
+        </div>
+    </div>
+  <button class="item" id="heal-menu">Heal</button>
+  <button class="item" onclick="location.href='wh.html'" >Inventory</button>
+  <button class="item" id="crime-menu">Crimes</button>
+  <button class="item" id="missionButton">Hitlist</button>
+	<div id="missionPopup" class="popup">
+  <div class="popup-content">
+		<h1> <span id='missionname'>Hitlist completed.</span></h1>
+    <p id='missiondesc' class='descr'></p>
+		<h3 id='missionreq'></h3>
+ <!--   <ul>
+      <li>
+        <img src="item1.jpg" alt="Item 1"> Item 1
+      </li>
+      <li>
+        <img src="item2.jpg" alt="Item 2"> Item 2
+      </li>
+      <!-- Add more required items as needed 
+    </ul> -->
+		<div id='rwrds'><span id='missioncashreward'></span><span id='missionxpreward'></span></div>
+		<div class='btns' id='bttns'><button id="closeButton" class='backbtn'>Close</button></div>
+  </div>
+</div>
+	<button class="item" onclick="location.href='backrooms.html'">Profile</button>
+    <!-- Menu's -->
+<ul id="dmenu">
+  <li onclick="donate(10)">Donate $10</li>
+  <li onclick="donate(20)">Donate $20</li>
+  <li onclick="donate(30)">Donate $30</li>
+</ul>
+<!--<ul id="smenu">
+	<li onclick="buy(switchy)">[-]</li>
+  <li onclick="buy(crowbar)">[$50] Crowbar</li>
+  <li onclick="buy(switchblade)">[$200] Switchblade</li>
+  <li onclick="buy(glock)">[$500] Glock</li>
+	<li onclick="buy(shotgun)">[$600] Shotgun</li>
+	<li onclick="buy(bulletproofVest)">[$600] BP Vest</li>
+  <li onclick="buy(brassKnuckles)">[$120] Brass Knuckles</li>
+</ul>-->
+<ul id="hmenu">
+  <li onclick="heal()">Heal [$<span id='healcosttxt'></span>]</li>
+</ul>
+<ul id="cmenu">
+  <li onclick="crime(1)">Break into a wharehouse</li>
+  <li onclick="crime(2)">Stab someone</li>
+  <li onclick="crime(3)">Hold up a store</li>
+</ul>
+</div>
+<div id="toast-container"></div>
+    <div id="level-container"></div>
+
+    
+<div class="background"/>
+  <script src="../scripts/player.js"></script>
+  <script src="../scripts/home.js"></script>
+  <script src="../scripts/inv.js"></script>
+	<script src="../scripts/fighter.js"></script>
+	<script src="../scripts/missions.js"></script>
+</body>
+</html>
